@@ -18,8 +18,12 @@ def login_page(request: Request):
 
 
 # Halaman dashboard setelah login
+@app.get("/dashboard", response_class=HTMLResponse)
+def dashboard_get(request: Request):
+    return templates.TemplateResponse("dashboard.html", {"request": request})
+
 @app.post("/dashboard", response_class=HTMLResponse)
-def dashboard(request: Request, phone: str = Form(...)):
+def dashboard_post(request: Request, phone: str = Form(...)):
     return templates.TemplateResponse("dashboard.html", {
         "request": request,
         "phone": phone
@@ -39,6 +43,8 @@ def menu_booking(request: Request):
     return templates.TemplateResponse("menu-booking.html",{"request": request})
 
 # Menyimpan data booking
+menu_history = []
+
 @app.post("/booking-submit", response_class=HTMLResponse)
 def booking_submit(
     request: Request,
@@ -47,8 +53,6 @@ def booking_submit(
     jam: str = Form(...),
     jumlah_orang: int = Form(...)
 ):
-
-    # simpan ke history
     menu_history.append({
         "nama": nama,
         "tanggal": tanggal,
@@ -68,7 +72,7 @@ def booking_submit(
 
 #Menu History
 @app.get("/menu-history", response_class=HTMLResponse)
-def menu_history(request: Request):
+def menu_history_page(request: Request):
     return templates.TemplateResponse("menu-history.html", {
         "request": request,
         "history": menu_history

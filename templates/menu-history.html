@@ -1,1 +1,36 @@
-<h2>ini menu history</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History Booking</title>
+</head>
+<body>
+<h2>Riwayat Booking</h2>
+
+{% if history %}
+<table border="1" cellpadding="5">
+    <tr>
+        <th>Nama</th>
+        <th>Tanggal</th>
+        <th>Jam</th>
+        <th>Jumlah Orang</th>
+    </tr>
+
+    {% for item in history %}
+    <tr>
+        <td>{{ item.nama }}</td>
+        <td>{{ item.tanggal }}</td>
+        <td>{{ item.jam }}</td>
+        <td>{{ item.jumlah }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% else %}
+<p>Tidak ada history booking.</p>
+{% endif %}
+
+<div class="menu-card" onclick="window.location.href='/dashboard'">
+    <div class="overlay">Kembali Ke Dashboard</div>
+</div>
+</body>
+</html>

@@ -1,6 +1,7 @@
 body {
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
+            color: white;
+            background: rgb(33, 33, 33);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -8,7 +9,7 @@ body {
             margin: 0;
         }
         .container {
-            background: white;
+            background: #13322b;
             padding: 25px;
             border-radius: 10px;
             width: 300px;
@@ -28,7 +29,7 @@ body {
         button {
             width: 100%;
             padding: 10px;
-            background: #4CAF50;
+            background: #104811;
             border: none;
             color: white;
             font-size: 16px;

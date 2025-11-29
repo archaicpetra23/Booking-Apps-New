@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background: #68b9fb;
+    background: rgb(33, 33, 33);
     font-family: "Poppins", sans-serif;
     color: white;
 }
@@ -12,18 +12,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to bottom, #438fe0, #ffffff);
+    background: #13322b;
 }
 
 .menu-icon {
     font-size: 26px;
     cursor: pointer;
+    color: white;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 2px;
+    color: white;
 }
 
 /* CONTENT */
@@ -69,7 +71,7 @@ body {
     font-size: 25px;
     font-weight: 600;
     color: white;
-    background: rgba(29, 46, 51, 0.45);
+    background: #13322b;
     border-radius: 18px;
 }
 
