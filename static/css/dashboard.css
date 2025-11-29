@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    background: #68b9fb;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+/* HEADER */
+.header {
+    width: 89,5%;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, #438fe0, #ffffff);
+}
+
+.menu-icon {
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* CONTENT */
+.content {
+    padding: 15px 20px;
+}
+
+.section-title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* Rekomendasi image */
+.rekomendasi-box img {
+    width: 100%;
+    border-radius: 18px;
+    display: block;
+}
+
+/* MENU BUTTONS */
+.menu-card {
+    position: relative;
+    padding-top: 100px;
+    margin-top: 18px;
+    cursor: pointer;
+}
+
+.menu-card img {
+    width: 100%;
+    border-radius: 18px;
+    display: block;
+}
+
+.menu-card .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 18px 0;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    background: rgba(29, 46, 51, 0.45);
+    border-radius: 18px;
+}
+
+/* RESPONSIVE UNTUK PC & LAPTOP */
+
+@media (min-width: 768px) {
+    .content {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .menu-card img,
+    .rekomendasi-box img {
+        border-radius: 22px;
+    }
+
+    .menu-card .overlay {
+        font-size: 22px;
+        padding: 20px 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content {
+        max-width: 950px;
+    }
+
+    .menu-card {
+        margin-top: 25px;
+    }
+
+    .menu-card .overlay {
+        font-size: 24px;
+    }
+}

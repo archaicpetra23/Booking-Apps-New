@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- Load CSS dari static FastAPI -->
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="menu-icon">☰</div>
+        <div class="logo">S&F</div>
+    </header>
+
+    <main class="content">
+
+        <h3 class="section-title">REKOMENDASI MENU</h3>
+
+        <!-- Rekomendasi Menu -->
+        <div class="rekomendasi-box">
+            <img src="/static/images/rekom1.jpg" alt="Rekomendasi">
+        </div>
+
+        <!-- Tombol Navigasi -->
+        <div class="menu-card" onclick="window.location.href='/menu makanan'">
+            <div class="overlay">MENU MAKANAN</div>
+        </div>
+
+        <div class="menu-card" onclick="window.location.href='/menu booking'">
+            <div class="overlay">RESERVASI KURSI</div>
+        </div>
+
+        <div class="menu-card" onclick="window.location.href='/menu history'">
+            <div class="overlay">HISTORY RESERVASI</div>
+        </div>
+
+    </main>
+
+</body>
+</html>
