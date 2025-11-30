@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    background: rgb(33, 33, 33);
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,10 +10,10 @@ body {
 }
 
 form {
-    background: white;
+    background: #104811;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgb(38, 255, 0);
     width: 320px;
 }
 
@@ -21,7 +21,7 @@ label {
     display: block;
     margin-bottom: 6px;
     font-weight: bold;
-    color: #444;
+    color: white;
 }
 
 input {
@@ -34,21 +34,21 @@ input {
 }
 
 input:focus {
-    border-color: #007bff;
+    border-color: #104811;
     outline: none;
 }
 
 button {
     width: 100%;
-    background: #007bff;
+    background: white;
     padding: 10px;
     border: none;
-    color: white;
+    color: black;
     border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #0056b3;
+    background: #00ff0d;
 }
