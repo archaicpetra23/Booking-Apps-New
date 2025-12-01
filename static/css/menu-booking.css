@@ -1,11 +1,21 @@
+.header {
+    width: 89,5%;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    }
+
 body {
     font-family: Arial, sans-serif;
-    background: rgb(33, 33, 33);
+    background-image: url('/static/images/bg1.png');
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
 }
 
