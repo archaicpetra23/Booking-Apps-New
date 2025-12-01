@@ -1,4 +1,39 @@
-<h2>booking berhasil</h2>
-<div class="menu-card" onclick="window.location.href='/menu-history'">
-            <div class="overlay">History</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Berhasil</title>
+    <link rel="stylesheet" href="/static/css/booking-success.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="menu-icon" onclick="window.location.href='/dashboard'">☰</div>
+    <div class="logo">S&F</div>
+</header>
+
+<div class="container">
+
+    <h2>TERIMA KASIH!</h2>
+
+    <div class="success-box">
+        <p>Reservasi Anda telah berhasil diproses.</p>
+
+        <div class="info">
+            <p><strong>Nama:</strong> {{ nama }}</p>
+            <p><strong>Tanggal:</strong> {{ tanggal }}</p>
+            <p><strong>Jam:</strong> {{ jam }}</p>
+            <p><strong>Jumlah Orang:</strong> {{ jumlah }}</p>
+            <p><strong>Kursi:</strong> {{ seat }}</p>
         </div>
+    </div>
+
+    <div class="menu-card" onclick="window.location.href='/dashboard'">
+        <div class="overlay">Kembali ke Dashboard</div>
+    </div>
+
+</div>
+
+</body>
+</html>

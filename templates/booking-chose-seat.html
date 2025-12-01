@@ -26,33 +26,43 @@
     <div class="room">
 
         <div class="seat-grid">
-    <button onclick="pilihSeat('S1')">S1</button>
-    <button onclick="pilihSeat('S2')">S2</button>
-    <button onclick="pilihSeat('S3')">S3</button>
-    <button onclick="pilihSeat('S4')">S4</button>
-    <button onclick="pilihSeat('S5')">S5</button>
-    <button onclick="pilihSeat('S6')">S6</button>
-    <button onclick="pilihSeat('S7')">S7</button>
-    <button onclick="pilihSeat('S8')">S8</button>
-    <button onclick="pilihSeat('S9')">S9</button>
-    <button onclick="pilihSeat('S10')">S10</button>
-    <button onclick="pilihSeat('S11')">S11</button>
-    <button onclick="pilihSeat('S12')">S12</button>
-    </div>
 
-    <div class="bar-area">
-    <button onclick="pilihSeat('B1')" class="bar-seat">B1</button>
-    <button onclick="pilihSeat('B2')" class="bar-seat">B2</button>
-    <button onclick="pilihSeat('B3')" class="bar-seat">B3</button>
-    <button onclick="pilihSeat('B4')" class="bar-seat">B4</button>
-    </div>
+    {% for num in range(1,13) %}
+        {% set seat = "S" ~ num %}
 
+        <!-- Jika kursi sudah dipesan -->
+        {% if seat in reserved_seats %}
+            <button class="seat-booked" disabled>{{ seat }}</button>
+
+        <!-- Jika kursi masih kosong → ada onclick -->
+        {% else %}
+            <button class="seat" onclick="pilihSeat('{{ seat }}')">{{ seat }}</button>
+
+        {% endif %}
+    {% endfor %}
+
+</div>
+
+
+<div class="bar-area">
+
+    {% for num in range(1,5) %}
+        {% set seat = "B" ~ num %}
+
+        {% if seat in reserved_seats %}
+            <button class="bar-seat seat-booked" disabled>{{ seat }}</button>
+        {% else %}
+            <button class="bar-seat" onclick="pilihSeat('{{ seat }}')">{{ seat }}</button>
+        {% endif %}
+
+    {% endfor %}
+
+</div>
 <script>
 function pilihSeat(seat) {
     window.location.href = "/menu-form?seat=" + seat;
 }
 </script>
-    </div>
 </div>
 
 <div class="menu-card" onclick="window.location.href='/menu-makanan'">
