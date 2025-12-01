@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi Kursi</title>
+    <link rel="stylesheet" href="/static/css/booking-chose-seat.css">
+</head>
+
+
+
+<body>   
+
+<header class="header">
+        <div class="menu-icon" onclick="window.location.href='/dashboard'">☰</div>
+        <div class="logo">S&F</div>    
+</header>    
+
+<div class="main">
+
+    <!-- CONTENT WRAPPER -->
+    <div class="content">
+
+    <h2>RESERVASI KURSI</h2>
+
+    <div class="room">
+
+        <div class="seat-grid">
+    <button onclick="pilihSeat('S1')">S1</button>
+    <button onclick="pilihSeat('S2')">S2</button>
+    <button onclick="pilihSeat('S3')">S3</button>
+    <button onclick="pilihSeat('S4')">S4</button>
+    <button onclick="pilihSeat('S5')">S5</button>
+    <button onclick="pilihSeat('S6')">S6</button>
+    <button onclick="pilihSeat('S7')">S7</button>
+    <button onclick="pilihSeat('S8')">S8</button>
+    <button onclick="pilihSeat('S9')">S9</button>
+    <button onclick="pilihSeat('S10')">S10</button>
+    <button onclick="pilihSeat('S11')">S11</button>
+    <button onclick="pilihSeat('S12')">S12</button>
+    </div>
+
+    <div class="bar-area">
+    <button onclick="pilihSeat('B1')" class="bar-seat">B1</button>
+    <button onclick="pilihSeat('B2')" class="bar-seat">B2</button>
+    <button onclick="pilihSeat('B3')" class="bar-seat">B3</button>
+    <button onclick="pilihSeat('B4')" class="bar-seat">B4</button>
+    </div>
+
+<script>
+function pilihSeat(seat) {
+    window.location.href = "/menu-form?seat=" + seat;
+}
+</script>
+    </div>
+</div>
+
+<div class="menu-card" onclick="window.location.href='/menu-makanan'">
+            <div class="overlay">MENU MAKANAN</div>
+        </div>
+</body>
+</html>

@@ -1,41 +1,94 @@
 body {
-            font-family: Arial, sans-serif;
-            color: white;
-            background-image: url('/static/images/bg1.png');
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background: #13322b;
-            padding: 25px;
-            border-radius: 10px;
-            width: 300px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        input {
-            width: 92%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background: #104811;
-            border: none;
-            color: white;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #45a049;
-        }
+    font-family: Arial, sans-serif;
+    background-image: url('/static/images/bg1.png');
+    background-position: center;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.login-box {
+    background: #13322b;
+    border: 4px solid white;
+    border-radius: 15px;
+
+    width: 350px;
+    padding: 35px 30px;
+
+    box-sizing: border-box;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* Title login */
+.login-box h2 {
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+
+    background: #13322b;
+
+
+    padding: 10px 0;
+    border-radius: 10px;
+
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Input style */
+.login-box input {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 18px;
+
+    background: rgba(255,255,255,0.08);
+    border: 3px solid white;
+
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+
+    transition: 0.2s ease;
+}
+
+.login-box input::placeholder {
+    color: #ddd;
+}
+
+/* Input focus */
+.login-box input:focus {
+    outline: none;
+    background: white;
+    color: #13322b;
+}
+
+/* Tombol */
+.login-box button {
+    width: 100%;
+    padding: 12px;
+
+    background: #13322b;
+    border: 3px solid white;
+
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+/* Hover tombol seperti menu-card */
+.login-box button:hover {
+    background: white;
+    color: #13322b;
+}

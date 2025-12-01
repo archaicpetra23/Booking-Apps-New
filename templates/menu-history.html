@@ -14,6 +14,7 @@
         <th>Tanggal</th>
         <th>Jam</th>
         <th>Jumlah Orang</th>
+        <th>Seat</th>      <!-- kolom baru -->
     </tr>
 
     {% for item in history %}
@@ -22,13 +23,15 @@
         <td>{{ item.tanggal }}</td>
         <td>{{ item.jam }}</td>
         <td>{{ item.jumlah }}</td>
+        <td>{{ item.seat }}</td>   <!-- data seat -->
     </tr>
     {% endfor %}
 </table>
 
 {% else %}
-<p>Tidak ada history booking.</p>
+<p class="empty-history">Tidak ada history booking</p>
 {% endif %}
+
 
 <div class="menu-card" onclick="window.location.href='/dashboard'">
     <div class="overlay">Kembali Ke Dashboard</div>

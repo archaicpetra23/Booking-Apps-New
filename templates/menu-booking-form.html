@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Booking</title>
+        <link rel="stylesheet" href="/static/css/menu-booking.css">
+    </head>
+
+    <header class="header">
+        <div class="menu-icon" onclick="window.location.href='/dashboard'">☰</div>
+        <div class="logo">S&F</div>
+    </header>
+
+    <body>
+        <form action="/booking-submit" method="post">
+
+        <label>Kursi:</label>
+        <input type="text" value="{{ seat }}" disabled>
+        <input type="hidden" name="seat" value="{{ seat }}">
+        <br><br>
+
+        <label>Nama:</label>
+        <input type="text" name="nama" required><br><br>
+
+        <label>Tanggal:</label>
+        <input type="date" name="tanggal" required><br><br>
+
+        <label>Jam:</label>
+        <input type="time" name="jam" required><br><br>
+
+        <label>Jumlah Orang:</label>
+        <input type="number" name="jumlah_orang" min="1" required><br><br>
+
+        <button type="submit">Booking</button>
+</form>
+
+        </form>
+    </body>
+</html>
