@@ -9,8 +9,7 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
-
-
+                                                         
 # Login Page
 @app.get("/", response_class=HTMLResponse)
 def login_page(request: Request):
@@ -93,6 +92,7 @@ def booking_submit(
         "jam": jam,
         "jumlah": jumlah_orang
     })
+    
 # Menu History
 @app.get("/menu-history", response_class=HTMLResponse)
 def menu_history_page(request: Request):
